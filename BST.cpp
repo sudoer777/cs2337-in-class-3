@@ -165,6 +165,7 @@ std::ostream &operator<<(std::ostream &out, BST bst) {
         out << node->getNum() << " ";
         if (node->getLeft()) queue.push(node->getLeft());
         if (node->getRight()) queue.push(node->getRight());
+        queue.pop();
     }
     return out;
 }
