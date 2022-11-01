@@ -162,6 +162,7 @@ int BST::getHeight(Node* n){
     return 1+std::max(getHeight(n->getLeft()), getHeight(n->getRight()));
 }
 
+// Prints all nodes in tree using a breadth-first traversal
 std::ostream &operator<<(std::ostream &out, BST bst) {
     auto queue = std::queue<Node*>();
     queue.push(bst.root);
