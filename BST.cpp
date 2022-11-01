@@ -146,14 +146,17 @@ Node* BST::deleteNode(int x)
 
 BST::~BST(){}
 
+//calls helper to get height from root
 int BST::getHeight(){
     return getHeight(root);
 }
 
+//recursive function that finds max height of children
 int BST::getHeight(Node* n){
     if(n == nullptr){
         return -1;
     }
+    //returns 1 more than the maximum height of the children
     return 1+std::max(getHeight(n->getLeft()), getHeight(n->getRight()));
 }
 

@@ -6,23 +6,16 @@ using namespace std;
 
 int main() {
     BST bst(-1);
-    Node** n = new Node*[10];
-    //-1,-4,10,-5,5,100,2,7,1,9
-    int nums[] = {10,5,100,-4,2,1,7,9};
+    int nums[] = {10,5,100,-4,2,1,7,9, 67};
 
-    for(int i = 0; i < 10; i++){
-        n[i] = new Node(nums[i]);
+    for(auto num : nums) {
+        auto node = new Node(num);
+        bst.add(node);
     }
 
-    for(int i = 0; i < 10; i++){
-        bst.add(n[i]);
-    }
+    cout << "TREE HEIGHT: " << bst.getHeight() << std::endl;
 
-
-
-    cout << bst.getHeight() << std::endl;
-
-    cout << bst;
+    cout << "ELEMENTS: " << bst;
 
     return 0;
 }
