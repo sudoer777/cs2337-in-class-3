@@ -1,7 +1,9 @@
 #ifndef BST_H
 #define BST_H
-#include "Node.h"
 #include <algorithm>
+
+#include <ostream>
+#include "Node.h"
 
 class BST
 {
@@ -18,5 +20,6 @@ public:
 
     int getHeight();
     int getHeight(Node* n);
+    friend std::ostream &operator<<(std::ostream &out, BST bst);
 };
 #endif // BST_H

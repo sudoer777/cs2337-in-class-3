@@ -3,4 +3,4 @@ project(in_class_3)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(in_class_3 main.cpp)
+add_executable(in_class_3 main.cpp BST.cpp BST.h Node.h)

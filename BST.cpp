@@ -1,3 +1,4 @@
+#include <queue>
 #include "BST.h"
 
 
@@ -154,4 +155,16 @@ int BST::getHeight(Node* n){
         return -1;
     }
     return 1+std::max(getHeight(n->getLeft()), getHeight(n->getRight()));
+}
+
+std::ostream &operator<<(std::ostream &out, BST bst) {
+    auto queue = std::queue<Node*>();
+    queue.push(bst.root);
+    while (!queue.empty()) {
+        auto node = queue.front();
+        out << node->getNum() << " ";
+        if (node->getLeft()) queue.push(node->getLeft());
+        if (node->getRight()) queue.push(node->getRight());
+    }
+    return out;
 }
