@@ -18,7 +18,9 @@ int main() {
     Node* n5 = new Node(9);
     bst.add(n5);
 
-    cout << bst.getHeight();
+    cout << bst.getHeight() << std::endl;
+
+    cout << bst;
 
     return 0;
 }
