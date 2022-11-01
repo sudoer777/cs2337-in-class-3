@@ -1,3 +1,9 @@
+/*
+ * Ethan Reece - EDR220000
+ * Stephen George - SXG210258
+ */
+
+
 #include <iostream>
 #include <stdlib.h>
 #include "Node.h"
