@@ -13,9 +13,9 @@ int main() {
         bst.add(node);
     }
 
-    cout << bst.getHeight() << std::endl;
+    cout << "TREE HEIGHT: " << bst.getHeight() << std::endl;
 
-    cout << bst;
+    cout << "ELEMENTS: " << bst;
 
     return 0;
 }
