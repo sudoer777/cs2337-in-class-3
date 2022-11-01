@@ -145,13 +145,13 @@ Node* BST::deleteNode(int x)
 }
 
 std::ostream &operator<<(std::ostream &out, BST bst) {
-    auto queue = std::queue<Node>();
+    auto queue = std::queue<Node*>();
     queue.push(bst.root);
     while (!queue.empty()) {
         auto node = queue.front();
-        out << node.getNum() << " ";
-        if (node.getLeft()) queue.push(node.getLeft());
-        if (node.getRight()) queue.push(node.getRight());
+        out << node->getNum() << " ";
+        if (node->getLeft()) queue.push(node->getLeft());
+        if (node->getRight()) queue.push(node->getRight());
     }
     return out;
 }
