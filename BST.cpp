@@ -142,3 +142,16 @@ Node* BST::deleteNode(int x)
 
 
 }
+
+BST::~BST(){}
+
+int BST::getHeight(){
+    return getHeight(root);
+}
+
+int BST::getHeight(Node* n){
+    if(n == nullptr){
+        return -1;
+    }
+    return 1+std::max(getHeight(n->getLeft()), getHeight(n->getRight()));
+}

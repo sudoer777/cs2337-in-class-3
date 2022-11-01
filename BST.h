@@ -1,7 +1,7 @@
 #ifndef BST_H
 #define BST_H
-#include "node.h"
-
+#include "Node.h"
+#include <algorithm>
 
 class BST
 {
@@ -15,5 +15,8 @@ public:
     bool search(int x);
     void insert(Node*);
     Node* deleteNode(int);
+
+    int getHeight();
+    int getHeight(Node* n);
 };
 #endif // BST_H
