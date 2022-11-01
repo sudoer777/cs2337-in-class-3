@@ -1,7 +1,8 @@
 #ifndef BST_H
 #define BST_H
-#include "node.h"
 
+#include <ostream>
+#include "Node.h"
 
 class BST
 {
@@ -15,5 +16,6 @@ public:
     bool search(int x);
     void insert(Node*);
     Node* deleteNode(int);
+    friend std::ostream &operator<<(std::ostream &out, BST bst);
 };
 #endif // BST_H
