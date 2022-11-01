@@ -1,3 +1,8 @@
+/*
+ * Ethan Reece - EDR220000
+ * Stephen George - SXG210258
+ */
+
 #ifndef NODE_H
 #define NODE_H
 
